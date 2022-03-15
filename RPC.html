@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+	<title>Rock Paper Scissors</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+<body>
+	<header class="header">
+		<h1>Rock Paper Scissors Lizard Spock</h1>
+	</header>
+	<div class="container">
+	    <div class="score-container">
+		    <span class="user">YOU</span>
+		    <span id="score"></span>
+		    <span class="com">COM</span>
+	    </div>
+		<canvas id="canvas">
+			<div class="highscore-container"> <!--Add Highscore elements-->
+				<span class ="Highscore">high score :</span>
+				<span id="highscore"></span>
+			</div>
+		</canvas>
+	    <div class="buttons">
+		    <button id="paper" class="bn" onclick="game(this.value)" value="0">🧻</button> <!--WORKS - beat rock-->
+		    <button id="rock" class="bn" onclick="game(this.value)" value="1">🧱</button> <!--WORKS - beat scissor-->
+		    <button id="scissors" class="bn" onclick="game(this.value)" value="2">✂️</button><!-- FIX draw instead of loss when draw-->
+            <button id="lizard" class="bn" onclick="game(this.value)" value="3">🦎</button> <!--beats rock atm-->
+            <button id="spock" class="bn" onclick="game(this.value)" value="4">🖖</button> <!--spock beats lizard-->
+	   </div>
+	   <div id="challenge">
+	   	<div id="you">
+	   	    <div id="YourObject"><p id="yourscore"></p></div>
+	   	    <div class="who">You</div>
+	   	</div>
+	   	<div id="result"><p id="result2"></p><p id="who"><p></div>
+	   	<div id="com">
+	   	    <div id="ComObject"><p id="otherscore"></p></div>
+	   	    <div class="who">Computer</div>
+	   	</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
